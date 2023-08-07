@@ -88,7 +88,7 @@ app.get("/view-photos", async (req, res) => {
     .split("\n")
     .filter(item => item)
     .map(id => {
-      return `<li><img src="https://res.cloudinary.com/${cloudinaryConfig.cloud_name}/image/upload/w_600,h_300,c_fill,q_100/${id}.jpg">
+      return `<li><img src="https://res.cloudinary.com/${cloudinaryConfig.cloud_name}/image/upload/w_400,h_300,c_fill,q_100/${id}.jpg">
       <form action="delete-photo" method="POST">
         <input type="hidden" name="id" value="${id}" />
         <button>Delete</button>
